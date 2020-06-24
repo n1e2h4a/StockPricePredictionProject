@@ -83,7 +83,8 @@ The Project Focused on Google Stock Price on real time data.i use 5 year back Hi
  Zookeeper keeps track of status of the Kafka cluster nodes and it also keeps track of Kafka topics, partitions etc. Zookeeper it self is allowing multiple  clients to perform simultaneous reads and writes and acts as a shared configuration service within the system.
 ## Kafka Installation
 - Install Java
-```- wget http://www-us.apache.org/dist/kafka/2.4.0/kafka_2.13-2.4.0.tgz
+```
+-wget http://www-us.apache.org/dist/kafka/2.4.0/kafka_2.13-2.4.0.tgz
 ```
  
 
