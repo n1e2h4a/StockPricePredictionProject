@@ -68,6 +68,7 @@ The Project Focused on Google Stock Price on real time data.i use 5 year back Hi
     
   - Now the data is ready for the modeling Process
   
+  ## Step 4
   ## Training and testing the model 
    - First convert the pandas dataframe to Spark RDD so import SQLcontext and Sparkcontext from pyspark and convert the dataframe to spark RDD
    - import pyspark mlib library so that we can use all the facilities of machine learning
@@ -198,36 +199,49 @@ now kafka installation is completed here
 - Graph is ready http://127.0.0.1:5000/
 
 ## Deployment
-- To deploy a flask application, create an EC2 instance with t2 medium and minimum of 15GB of storage with ubuntu OS on AWS.
+- To deploy a flask application, create an EC2 instance with t2 medium and - minimum of 15GB of storage with ubuntu OS on AWS.
 
 - Create a http security group to allow the public to view web sites.
 - Download the .pem file to access the instance from the local terminal.
 - To access instance from local terminal, make ssh connection
+```
 **ssh -i flask.pem ubuntu@<Elastic IP address of ec2 instance>
+```
+
 We can create an Elastic IP so that the ip address may be constant without changing when we start an instance.
 
 Now update packages
-
+```
 **sudo apt-get update
+```
 Install git
+```
 
 **sudo apt-get install git
+```
 Clone the project
-
+```
 **Install pip
 sudo apt-get install python3-pip
+```
 Now install required libraries
-
+```
 pip3 install -r requirements.txt
+```
 Install Gunicorn3, it is a Python Web Server Gateway Interface HTTP server.
-
+```
 **pip3 install gunicorn3
+```
 Configure the gunicorn3 Open flaskapp
-
+```
 **$ cd ls
-Run $ gunicorn3 app:app
- 
+```
+run
+```
+ $ gunicorn3 app:app
+``` 
 Create Gunicorn as a Service
+```
 **Go to /etc/systemd/system/
 Cd /etc/systemd/system/
 $ sudo vim gunicorn3.service
@@ -242,22 +256,30 @@ ExecStart=/usr/bin/gunicorn3 --workers 3 --bind unix:flaskapp.sock -m 007 app:ap
 **$ sudo systemctl daemon-reload
 $ sudo service gunicorn3 start
 $ sudo service gunicorn3 status
+```
 Now Install nginx, Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
-
+```
 **sudo apt-get install nginx
+```
 Set up the environment as above mentioned procedures such as downloading kafka and running zookeeper and kafka server. Now going to the kafkahome and run the command to start zookeeper.properties
-
+```
 **bin/zookeeper-server-start.sh config/zookeeper.properties
+```
 From kafkahome now run the command to start kafka server
-
+```
 **bin/kafka-server-start.sh config/server.properties
+```
 Go to nginx sites-enabled directory
-
+```
 **cd /etc/nginx/sites-enabled
+```
 create new file
+```
 
 **sudo nano flaskapp
+```
 Configure following
+```
 
 **server{
     listen 8080;
@@ -267,18 +289,22 @@ Configure following
           proxy_pass http://127.0.0.1:8000;
     }
 }
+```
 Now restart nginx server
-
+```
 **sudo service nginx restart
+```
 Now go to the project directory and run the Prod.py in the terminal to read live data from alpha vantage and send it to the kafka server. We can check the previous jobs by using command
 
 **jobs -l
 Now run the app command using gunicorn3
-
+```
 **gunicorn3 --threads=4 app:app
+```
 Check the result on web using elasticip followed by 8080 port
 
-Job Scheduler
+## Job Scheduler
+
 Create job schedule to performane operation autometically.
 The Stock Price Prediction of streaming data's Graph display on webpage with aws instance, have to schedule 4 jobs.
 First running two servers, zookeeper and kafka with a time gap of 5 minutes.
