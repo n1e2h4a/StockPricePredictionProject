@@ -12,4 +12,6 @@ The Project based on Google Stock Price on real time value.In this project by us
 - Create api key on alphavantage site
 
 - Install Flask Steps:
-
+```
+adUOJhdcjnabdjandcaskjnlcka
+```
