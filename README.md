@@ -11,7 +11,11 @@ The Project based on Google Stock Price on real time value.In this project by us
 
 - Create api key on alphavantage site
 
-- Install Flask Steps:
-```
-adUOJhdcjnabdjandcaskjnlcka
-```
+- Install Flask Steps
+
+## Uplaod csv file into AWS s3 bucket
+**Download historical stock data from nasdaq**
+- Create AWS account and s3 services
+- Create aws_credential file containing all access keys with aws configure
+- Create and run Python script for creating s3 buckets and upload csv file in it
+
