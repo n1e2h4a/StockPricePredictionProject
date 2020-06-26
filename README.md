@@ -106,7 +106,7 @@ First, create systemd unit file for Zookeeper with below command:
 ```
 vim /etc/systemd/system/zookeeper.service
 ```
--Add below contnet:
+-Add below content:
 
 ```
 -[Unit]
