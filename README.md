@@ -328,3 +328,4 @@ Job schedule to zookeeper
         4. Job schedule to visulazation
 
            11 06 * * * cd gunicorn3 --threads=4 /home/ubuntu/Bridgelabz2020/visualization:app
+<img src=captured.gif>
