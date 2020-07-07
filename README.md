@@ -292,11 +292,11 @@ Configure following
 ```
 Now restart nginx server
 ```
-**sudo service nginx restart
+** sudo service nginx restart
 ```
 Now go to the project directory and run the Prod.py in the terminal to read live data from alpha vantage and send it to the kafka server. We can check the previous jobs by using command
 
-**jobs -l
+** jobs -l
 Now run the app command using gunicorn3
 ```
 **gunicorn3 --threads=4 app:app
