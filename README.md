@@ -333,5 +333,5 @@ Job schedule to zookeeper
 
 
 ## LICENSE
-Niharika 
-[MIT LICENSE](LICENSE)
+ Niharika 
+ Licensed under [MIT LICENSE](LICENSE)
