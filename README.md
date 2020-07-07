@@ -198,6 +198,9 @@ now kafka installation is completed here
 
 - Graph is ready http://127.0.0.1:5000/
 
+<img src=captured.gif>
+
+
 ## Deployment
 - To deploy a flask application, create an EC2 instance with t2 medium and - minimum of 15GB of storage with ubuntu OS on AWS.
 
@@ -328,7 +331,6 @@ Job schedule to zookeeper
         4. Job schedule to visulazation
 
            11 06 * * * cd gunicorn3 --threads=4 /home/ubuntu/Bridgelabz2020/visualization:app
-<img src=captured.gif>
 
 
 
