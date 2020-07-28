@@ -3,6 +3,9 @@
 StockPricePrediction
 The Project Focused on Google Stock Price on real time data.i use 5 year back Historical Google stock price data for training and built the effective model for predicting Stock prices and display data on web page using flask web application and deploy my model on AWS EC2 instance.
 
+<img src=captured.gif>
+
+
 # Software Prerequisites:
 
 - Python3
@@ -198,7 +201,6 @@ now kafka installation is completed here
 
 - Graph is ready http://127.0.0.1:5000/
 
-<img src=captured.gif>
 
 
 ## Deployment
