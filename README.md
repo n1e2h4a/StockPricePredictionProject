@@ -178,7 +178,7 @@ Created topic stock
 
 ```
 now kafka installation is completed here
-- for running producer.py and consumer.py python file first start the server by using the above command.
+-for running producer.py and consumer.py python file first start the server by using the above command.
 
 ## python script file for producer and consumer
 
