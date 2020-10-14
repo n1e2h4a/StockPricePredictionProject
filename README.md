@@ -199,6 +199,7 @@ now kafka installation is completed here
 - Graph is ready http://127.0.0.1:5000/
 # area chart image for the graph
 <img src=stockgraph.png>
+
 # column chart for the graph
 <img src=captured.gif>
 
